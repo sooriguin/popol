@@ -1,0 +1,565 @@
+@import url(https://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+.notosanskr * { 
+ font-family: 'Noto Sans KR', sans-serif;
+}
+
+@font-face {
+    font-family: 'LeferiPoint-WhiteA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-WhiteA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* { margin: 0; padding: 0;}
+li { list-style: none;}
+a { text-decoration: none; color: #333; display: block;}
+img { width: 100%;}
+body { overflow-x: hidden; background-color: #31fba7; }
+header, section, footer {
+    width: 100%; float: left;
+}
+header, section, footer, div {
+    box-sizing: border-box;
+}
+.w1520 {
+    width: 85vw;
+    margin: 0 auto;
+    
+}
+.w1200 {
+    width: 62.5vw;
+    margin: 0 auto;
+    padding: 5vw 0;
+}
+header {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: 3vw 6vw;
+    position: fixed;
+    z-index: 100;
+}
+header .logo {
+    width: 6vw;
+}
+header nav {
+    text-align: right;
+}
+header nav .close_btn {
+    display: none;
+}
+header .menu_icon {
+    display: none;
+}
+header nav > ul > li > a {
+    font-family: 'LeferiPoint-WhiteA';
+    font-weight: bold;
+    font-size: 1.1vw;
+    padding-bottom: 10px;
+    /* 자식객체 :after의 위치 설정할 때 기준이 a태그임 */
+    position: relative;
+    /* 마우스 오버할 때 밑줄이 글자길이만큼만 그려짐 */
+    display: inline-block;
+    text-align: right;
+    margin-bottom: 10px;
+    color: #fff;
+}
+header nav > ul > li > a:after {
+    position:absolute;
+    content:"";
+    width:0;
+    height:1px;
+    background-color: #fff;
+    left:50%;
+    bottom: 10px;
+    transition:all 0.5s;
+}
+header nav > ul > li > a:hover:after,
+header nav > ul > li > a.active:after {
+    width:100%;
+    left:0;
+}
+h1 {
+    font-size: 2.5vw;
+    font-family: 'LeferiPoint-WhiteA';
+    padding: 3vw;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+}
+section { height: 100vh; overflow:hidden; padding-top:8vw;}
+section .minH { height: 25vh;   /* 410px; */}
+section > div.w1520 {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+section .photo {
+    width: 40vw;
+}
+section .des {
+    width: 35vw;
+    color: #fff;
+}
+section .des h1 {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 2.5vw;
+}
+
+section .des .detail {
+    padding-left:1vw;
+}
+section .des .detail ul li {
+    list-style: url(../img/vansbullet.png);
+    font-size: 1vw;
+    margin: 1vw 0;
+}
+section .des .detail ul li .title {
+    display: flex;
+    justify-content: space-between;
+    width: 5vw;
+    font-size: 1vw;
+    float: left;
+}
+section .des .detail ul li b {
+    display: inline-block;
+    width: 1vw;
+    height: 1vw;
+    background-color: #ff0000;
+    border: 1px solid #000;
+    border-radius: 100%;
+}
+section .des .detail ul li p {
+    display: inline-block;
+}
+section .des .detail ul li strong {
+    color: #f1096b;
+}
+section .des .buttons {
+    display: flex;
+    flex-flow: row nowrap;
+    margin-top: 4vw;
+}
+section .des .buttons button {
+    background: none;
+    border: none;
+    padding: 0.5vw 1.2vw;
+    font-weight: bold;
+    color: #fff;
+    font-size: 1vw;
+    background-color: #000;
+    border-radius: 20px;
+    margin-right: 1vw;
+    cursor: pointer;
+}
+
+.section1 h1 {
+    margin-right: 100px;
+}
+section .swiper {
+    position: relative;
+    height: 100%;    
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin:0 auto;
+    background-position: center;
+    background-size: cover;
+}
+section .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+}
+section .swiper-slide img {
+    display: block;
+    width: 100%;
+}
+
+.section1 {
+    background-image: url(../img/doob.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-position: center;
+    overflow: hidden;
+    padding-top:0;
+    display: flex;
+    justify-content: flex-start;
+    align-items :flex-end;
+    padding: 0;
+    color: #fff;
+}
+.section1 h1 {
+    margin-left:3vw;
+    position: relative;
+    z-index: 100;
+    text-align: left;
+}
+.section2 {
+    background-color: #000;
+    background-image: url(../img/vanslight.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    padding-top:0;
+}
+.section2 h1 {
+    color: #fff;
+}
+.section2 ul {
+    color: #fff;
+}
+.section2 .des .detail ul li .ball1 {
+    background-color: #000;
+}
+.section2 .des .detail ul li .ball2 {
+    background-color: #b80d0d;
+}
+.section2 .des .detail ul li .ball3 {
+    background-color: #fff;
+}
+.section3 {
+    background-color: #ffc60d;
+    background-image: url(../img/wowbirdlight.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+}
+.section3 .des .detail ul li .ball4 {
+    background-color: #000;
+}
+.section3 .des .detail ul li .ball5 {
+    background-color: #ed5e23;
+}
+.section3 .des .detail ul li .ball6 {
+    background-color: #fdc513;
+}
+.section3 .des .detail ul li .ball7 {
+    background-color: #fff;
+}
+.section3 .des .renewal_btn {
+    background-color: #8765ab;
+}
+.section3 .des .origin_btn {
+    background-color: #8765ab;
+}
+.section4 {
+    background-color: #4a281c;
+    background-image: url(../img/elandlight.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+
+}
+.section4 .w1520 .photo {
+    width: 35vw;
+}
+.section4 .w1520 .photo img {
+    margin-bottom: 3vw;
+}
+.section4 .des .detail ul li .ball8 {
+    background-color: #25120e;
+}
+.section4 .des .detail ul li .ball9 {
+    background-color: #ee4621;
+}
+.section4 .des .detail ul li .ball10 {
+    background-color: #fff;
+}
+.section4 .des .renewal_btn {
+    background-color: #4a281c;
+}
+.section4 .des .mobile_btn {
+    background-color: #4a281c;
+}
+.section4 .des .origin_btn {
+    background-color: #4a281c;
+}
+.section5 {
+    background-color: #54c900;
+    background-image: url(../img/ashlight.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+}
+.section5 .photo {
+    width: 35vw;
+}
+.section5 .des .detail ul li .ball11 {
+    background-color: #25120e;
+}
+.section5 .des .detail ul li .ball12 {
+    background-color: #ee4621;
+}
+.section5 .des .detail ul li .ball13 {
+    background-color: #fff;
+}
+.section5 .des .renewal_btn {
+    background-color: #4a281c;
+}
+.section5 .des .mobile_btn {
+    background-color: #4a281c;
+}
+.section5 .des .origin_btn {
+    background-color: #4a281c;
+}
+.section6 {
+    background-color: #31fba7;
+    background-image: url(../img/graphiclight.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+}
+.section6 img {
+    height: 300px;
+}
+.section7 {     
+    position:relative;
+    height:27vh;
+    overflow:hidden;
+}
+.section7 p {
+    position:absolute;
+    width:200%;
+    padding:6vh 0;
+    overflow:hidden;
+    font-size:6vw;
+    color:#333;    
+    border-top:1px solid #444;
+    border-bottom:1px solid #444;
+    text-shadow:3px 3px 3px #aaa;
+    white-space:nowrap;
+    animation:txtMove 15s linear infinite;
+}
+.section7 p i {
+    font-style:normal;
+    float:left;
+    width:50%;
+}
+.section8 {
+    background-color: #54c900;
+    background-image: url(../img/profile.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+}
+@keyframes txtMove {
+    0% { left:0; }
+    100% { left:-100% ;}
+}
+/* 팝업 */
+.popup {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 150;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.popup .container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 80vw;
+    height: 80vh;
+    background-color: #eee;
+}
+.popup .container .graphic {
+    width: 70%;
+    height: 100%;
+    background-color: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.popup .container .txt {
+    width: 27%;
+    height: 100%;
+    background-color: #ddd;
+}
+.popup .close {
+    position: absolute;
+    right: 1vw;
+    top: 1vw;
+    width: 3vw;
+}
+.popup .nextBtn {
+    position: absolute;
+    right: 5vw;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3vw;
+}
+.popup .prevBtn {
+    position: absolute;
+    left: 5vw;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 1vw;
+    width: 3vw;
+}
+
+/* 슬라이드 팝업 갤러리 설명 */
+.popup .txt .slide_des {
+    width: 100%;
+}
+.popup .txt .slide_des div {
+    padding: 1vw 2vw;
+}
+.popup .txt .slide_title {
+    line-height: 3vw;
+    font-size: 1vw;
+    background-color: #f9eefe;
+}
+.popup .txt .slide_title i {
+    padding: 0.4vw 0.8vw;
+    background-color: #8e6cad;
+    color: #fff;
+    border-radius: 6px;
+    margin-right: 0.5;
+    font-style: normal;
+}
+.popup .txt .slide_sub_title {
+    background-color: #efefef;
+}
+.popup .txt .slide_sub_title:before {
+    content: url(../);
+    margin-right: 0.5vw;
+}
+.popup .txt .slide_content {
+    background-color: #f8f8f8;
+    margin: 1vw 0;
+    margin-left: 1vw;
+}
+/* 프로필 스킬 */
+/* Stats */
+.stats-container {
+    width: 80%;
+    max-width: 350px;
+  }
+  
+  .stat-item {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+    display: inline-block;
+    width: 33.33%;
+    padding: 2%;
+  }
+  
+  .stat-item img {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+  
+  .stat-path,
+  .stat-back {
+    stroke-linecap: round;
+    stroke-width: 7;
+    fill: none;
+  }
+  
+  @media only screen and (max-width: 580px) {
+    .stat-item {
+      width: 50%;
+    }
+  }
+  
+  /* Tooltip */
+  .tooltip .tooltiptext {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    padding: 6px 12px;
+    background: #dddddd;
+    color: #ffffff;
+    letter-spacing: 1px;
+    text-align: center;
+    white-space: nowrap;
+    visibility: hidden;
+    z-index: 1;
+  }
+  
+  .tooltip .tooltiptext span {
+    display: block;
+    color: #ffffff;
+  }
+  
+  .tooltip .tooltiptext:after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent currentColor transparent;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+  $background: linear-gradient(to bottom, #405166 0%,#656f6f 100%);
+  $red: #e55643 ;
+  $green: #2b9f5e;
+  $yellow: #f1c83c;
+  $shadow: #533d4a;
+  
+  html{
+    height: 100%;
+  }
+  
+  body{
+    font-family: 'Fjalla One', sans-serif;
+    background: $background;
+  }
+  
+  .container{
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    display: block;
+    position: absolute;
+    max-width: 225px;
+  }
+  
+  .button{
+    float: left;
+    position: relative;
+    bottom: -65px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-10deg);
+    color: $red;
+    text-transform: uppercase;
+    opacity: 0;
+    visibility: hidden;
+    cursor: pointer;
+    
+    span{
+      transform: skew(-10deg);
+      display: block;
+      float: left;
+      text-shadow: $shadow 1px 1px, $shadow 2px 2px, $shadow 3px 3px, $shadow 4px 4px;
+    }
+  }
+  
+  
